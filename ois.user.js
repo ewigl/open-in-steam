@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         在 Steam(客户端) 中打开 - Open in Steam
 // @namespace    https://github.com/ewigl/open-in-steam
-// @version      0.2.8
+// @version      0.3.0
 // @description  在 Steam 网页中添加一个按钮, 以快速在 Steam(客户端) 中打开当前页面
 // @author       Licht
 // @license      MIT
