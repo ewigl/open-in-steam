@@ -9,8 +9,6 @@
 // @match        http*://*.steampowered.com/*
 // @match        http*://*.steamcommunity.com/*
 // @icon         https://store.steampowered.com/favicon.ico
-// @connect      localhost
-// @connect      *
 // @grant        GM_addStyle
 // ==/UserScript==
 
