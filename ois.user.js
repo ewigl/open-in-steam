@@ -6,8 +6,8 @@
 // @author       Licht
 // @license      MIT
 // @homepage     https://github.com/ewigl/open-in-steam
-// @match        http*://*.steampowered.com/*
-// @match        http*://*.steamcommunity.com/*
+// @match        *://*.steampowered.com/*
+// @match        *://*.steamcommunity.com/*
 // @icon         https://store.steampowered.com/favicon.ico
 // @grant        GM_addStyle
 // ==/UserScript==
