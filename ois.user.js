@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         在 Steam(客户端) 中打开 - Open in Steam
 // @namespace    https://github.com/ewigl/open-in-steam
-// @version      0.3.0
+// @version      0.3.1
 // @description  在 Steam 网页中添加一个按钮, 以快速在 Steam(客户端) 中打开当前页面
 // @author       Licht
 // @license      MIT
@@ -47,15 +47,17 @@
     // Main
     const main = {
         init() {
-            const openInSteamButton = `
-            <a id="open-in-steam-button" title="在 Steam (客户端) 中打开" href="steam://openurl/${location.href}" >
-                <svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 -960 960 960" >
-                    <path d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z"/>
-                </svg>
-            </a>
+            const openInSteamButton = document.createElement('a')
+            openInSteamButton.id = 'open-in-steam-button'
+            openInSteamButton.title = '在 Steam (客户端) 中打开'
+            openInSteamButton.href = `steam://openurl/${location.href}`
+            openInSteamButton.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 -960 960 960" >
+                <path d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z"/>
+            </svg>
             `
 
-            document.getElementsByTagName('body')[0].innerHTML += openInSteamButton
+            document.getElementsByTagName('body')[0].append(openInSteamButton)
         },
     }
 
