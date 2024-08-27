@@ -1,8 +1,10 @@
 // ==UserScript==
 // @name         在 Steam(客户端) 中打开 - Open in Steam
+// @name:en-US   Open (Web Page) in Steam (Client)
 // @namespace    https://github.com/ewigl/open-in-steam
 // @version      0.3.1
 // @description  在 Steam 网页中添加一个按钮, 以快速在 Steam(客户端) 中打开当前页面
+// @description:en-US  Add a button to open the current page in Steam (Client)
 // @author       Licht
 // @license      MIT
 // @homepage     https://github.com/ewigl/open-in-steam
@@ -44,12 +46,28 @@
 
     GM_addStyle(styleCSS)
 
+    const DEFAULT_LANGUAGE = 'en-US'
+
+    const titles = {
+        'zh-CN': '在 Steam (客户端) 中打开',
+        'en-US': 'Open in Steam (Client)',
+    }
+
+    const utils = {
+        getLanguage() {
+            return navigator.language || DEFAULT_LANGUAGE
+        },
+        getTitle() {
+            return titles[utils.getLanguage()]
+        },
+    }
+
     // Main
     const main = {
         init() {
             const openInSteamButton = document.createElement('a')
             openInSteamButton.id = 'open-in-steam-button'
-            openInSteamButton.title = '在 Steam (客户端) 中打开'
+            openInSteamButton.title = utils.getTitle()
             openInSteamButton.href = `steam://openurl/${location.href}`
             openInSteamButton.innerHTML = `
             <svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 -960 960 960" >
