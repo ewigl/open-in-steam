@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name         在 Steam(客户端) 中打开 - Open in Steam
-// @name:en   Open (Web Page) in Steam (Client)
+// @name         在 Steam 客户端中打开 Steam 网页
+// @name:en      Open Steam web page in Steam client
 // @namespace    https://github.com/ewigl/open-in-steam
-// @version      0.3.4
-// @description  在 Steam 网页中添加一个按钮, 以快速在 Steam(客户端) 中打开当前页面
-// @description:en  Add a button to open the current steam web page in Steam (Client)
+// @version      0.3.5
+// @description  在 Steam 网页中添加一个按钮, 以快速在 Steam 客户端中打开当前页面。
+// @description:en  Add a button to open current steam web page in Steam client.
 // @author       Licht
 // @license      MIT
 // @homepage     https://github.com/ewigl/open-in-steam
@@ -50,8 +50,8 @@
     const DEFAULT_LANGUAGE = 'en-US'
 
     const titles = {
-        'zh-CN': '在 Steam (客户端) 中打开',
-        'en-US': 'Open in Steam (Client)',
+        'zh-CN': '在 Steam 客户端中打开',
+        'en-US': 'Open in Steam Client',
     }
 
     const utils = {
